@@ -3,7 +3,7 @@
   <div class="row">
     <div class="alpha eight columns">
       <%= f.field_container :name do %>
-        <%= f.label :name %> <span class="required">*</span><br />
+        <%= f.label :name %>
         <%= f.text_field :name, class: "fullwidth" %>
         <%= f.error_message_on :name %>
       <% end %>
@@ -21,7 +21,7 @@
   <div class="row">
     <div class="alpha four columns">
       <%= f.field_container :active_from do %>
-        <%= f.label :active_from %> <span class="required">*</span><br />
+        <%= f.label :active_from %>
         <%= f.text_field :active_from, class: 'datepicker datepicker-from' %>
         <%= f.error_message_on :active_from %>
       <% end %>
@@ -45,7 +45,7 @@
 
     <div class="omega four columns">
       <%= f.field_container :priority do %>
-        <%= f.label :priority %> <span class="required">*</span><br />
+        <%= f.label :priority %>
         <%= f.text_field :priority, class: "fullwidth" %>
         <%= f.error_message_on :priority %>
       <% end %>
@@ -55,7 +55,7 @@
   <div class="row">
     <div class="alpha four columns">
       <%= f.field_container :parent do %>
-        <%= f.label :parent, Spree.t(:parent) %> <span class="required">*</span><br />
+        <%= f.label :parent, Spree.t(:parent) %>
         <%= f.collection_select(:parent_id, Spree::PriceBook.all - [f.object], :id, :name,
               include_blank: true, selected: Spree::PriceBook.default.id, class: 'fullwidth select2') %>
         <%= f.error_message_on :parent %>
@@ -63,7 +63,7 @@
     </div>
     <div class="four columns">
       <%= f.field_container :price_adjustment_factor do %>
-        <%= f.label :price_adjustment_factor %> <span class="required">*</span><br />
+        <%= f.label :price_adjustment_factor %>
         <%= f.text_field :price_adjustment_factor, class: 'fullwidth' %>
         <%= f.error_message_on :price_adjustment_factor %>
       <% end %>
