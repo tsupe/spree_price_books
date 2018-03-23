@@ -9,7 +9,7 @@ class Spree::PriceBook < ActiveRecord::Base
   has_many :products, -> { distinct }, through: :variants
   has_many :store_price_books
   has_many :stores, through: :store_price_books
-  
+
   validate :validate_currency_rate
   validate :validate_single_default
 
@@ -36,7 +36,7 @@ class Spree::PriceBook < ActiveRecord::Base
   ## Class Methods
 
   def self.create_default
-    create(currency: Spree::Config[:currency], default: true, name: 'Default')
+    create(currency: Spree::Config[:currency], default: true, name: 'Default', role: Spree::Role.find_by(name: :admin))
   end
 
   def self.default
