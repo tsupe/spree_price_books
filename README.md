@@ -9,7 +9,7 @@ Installation
 Add spree_price_books to your Gemfile:
 
 ```ruby
-gem 'spree_price_books', github: 'spree-contrib/spree_price_books'
+gem 'spree_price_books', github: 'ktdmedia/spree_price_books'
 ```
 
 Bundle your dependencies and run the installation generator:
@@ -51,7 +51,6 @@ require 'spree_price_books/factories'
 
 Credit
 ------
-
-http://www.surfdome.com/ for sponsoring the project.
+KTD Media[https://ktdmedia.com] & http://www.surfdome.com/ for sponsoring the project.
 
 Copyright (c) 2014 Jeff Dutil, released under the New BSD License
